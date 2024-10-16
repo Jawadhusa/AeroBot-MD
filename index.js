@@ -49,7 +49,7 @@ say('by ' + info.nameown, {
 app.listen(port, () => {
   console.log(chalk.green(`⚡ Port ${port} is open`));
 });
-const folderPath = './tmp';
+const folderPath = './src/tmp';
     if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath);
         console.log(chalk.green('tmp folder created successfully.'));

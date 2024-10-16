@@ -155,7 +155,7 @@ global.authFolder = storeSys.fixFileName(`${opts._[0] || ''}sessions`)
 let {
     state,
     saveCreds
-} = await useMultiFileAuthState(path.resolve('./sessions'))
+} = await useMultiFileAuthState(path.resolve('./system/sessions'))
 
 const connectionOptions = {
     pairingCode: true,
@@ -432,7 +432,7 @@ async function _quickTest() {
     Object.freeze(global.support);
 }
 
-const directory = './sessions';
+const directory = './system/sessions';
 function clearSesi(directory, fileNameToKeep) {
     fs.readdir(directory, (err, files) => {
         if (err) {
@@ -456,7 +456,7 @@ function clearSesi(directory, fileNameToKeep) {
 }
 
 function clearTmp() {
-    const tmp = [tmpdir(), join(__dirname, './tmp')];
+    const tmp = [tmpdir(), join(__dirname, './src/tmp')];
     const filename = [];
     tmp.forEach((dirname) => readdirSync(dirname).forEach((file) => filename.push(join(dirname, file))));
     return filename.map((file) => {
