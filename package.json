@@ -21,14 +21,14 @@
     "whatsapp",
     "wabot-aq"
   ],
-  "homepage": "https://github.com/GX004/Aero-Bot",
+  "homepage": "https://github.com/GX004/AeroBot-MD",
   "author": "Hardy",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GX004/Aero-Bot.git"
+    "url": "git+https://github.com/GX004/AeroBot-MD.git"
   },
   "bugs": {
-    "url": "https://github.com/GX004/Aero-Bot/issues"
+    "url": "https://github.com/GX004/AeroBot-MD/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
