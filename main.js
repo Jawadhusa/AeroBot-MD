@@ -262,14 +262,17 @@ async function connectionUpdate(update) {
     if (global.db.data == null) loadDatabase()
     if (connection === "open") {
         const deviceName = os.hostname();
-        const message = `• *Info*: Bot telah aktif
+        const message = `• *Info*: Bot is online
 ◦ *Os*: ${os.platform()} ${os.release()}
 ◦ *Device*: ${deviceName}
 ◦ *NameBot*: ${global.namebot}
 ◦ *Connected time*: ${new Date().toLocaleString()}`;
 
+        const onlinemsg = `*A E R O - B O T*
+        Your bot activated successfully`;
+        
         this.sendMessage(global.nomerown + `@s.whatsapp.net`, {
-            text: message
+            text: onlinemsg
         });
         console.log(chalk.bgGreen(chalk.white('The bot is active')));
     }
@@ -436,7 +439,7 @@ const directory = './system/sessions';
 function clearSesi(directory, fileNameToKeep) {
     fs.readdir(directory, (err, files) => {
         if (err) {
-            console.error('Terjadi kesalahan:', err);
+            console.error('Exited with error:', err);
             return;
         }
 
