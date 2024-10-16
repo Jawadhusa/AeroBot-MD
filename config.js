@@ -1,6 +1,7 @@
 /*
-nyari apa?
-ubah aja di folder function/settings/settings.js
+
+    Powered by MoroccoAI & Hardy Host
+
 */
 import './system/func/settings.js'
 import { watchFile, unwatchFile } from 'fs'
