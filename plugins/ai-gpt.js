@@ -6,11 +6,11 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   try {
     
     const BK9api = `https://bk9.fun/ai/chatgpt?q=${encodeURIComponent(text)}`;
-    const BK99 = await fetch(BK9api);
-    const BK8 = await BK99.json();
-    if (BK8.status && BK8.BK9) {
-      const respuestaAPI = BK8.BK9;
-      conn.reply(m.chat, respuestaAPI, m);
+    const result = await fetch(BK9api);
+    const data = await result.json();
+    if (data.status && data.BK9) {
+      const respuestaAPI = data.BK9;
+      conn.reply(m.chat, data.BK9, m);
     } else {
       throw "حدث خطأ أثناء معالجة طلبك.";
     }
