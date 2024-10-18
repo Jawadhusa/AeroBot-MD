@@ -1,8 +1,5 @@
 /*
-wa.me/6282285357346
-github: https://github.com/sadxzyq
-Instagram: https://instagram.com/tulisan.ku.id
-ini wm gw cok jan di hapus
+    Thank's to Hardy Host & Morocco AI
 */
 
 import { watchFile, unwatchFile } from 'fs'
@@ -19,7 +16,7 @@ import fetch from 'node-fetch'
     export async function closegc() {
 
         const moment = (await import('moment-timezone')).default;
-        let data = fs.readFileSync("./system/database/grup.json")
+        let data = fs.readFileSync("./system/database/group.json")
         let json = JSON.parse(data)
         const time = moment.tz('Africa/Casablanca').format('HH:mm');
 
@@ -54,10 +51,10 @@ import fetch from 'node-fetch'
             }
     
             } catch (e) {
-      //  console.log('eror: bot tidak terdaftar dalam grup')
+      //  console.log('error: bot not registered in group')
         json.splice(json.indexOf(schedule), 1);
-                // Menyimpan perubahan kembali ke file grup.json
-         fs.writeFileSync('./function/database/grup.json', JSON.stringify(json));
+                // Save changes back to the group.json file
+         fs.writeFileSync('./system/database/group.json', JSON.stringify(json));
                 return json
         }
         } 
