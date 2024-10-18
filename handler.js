@@ -964,11 +964,11 @@ export async function handler(chatUpdate) {
                 if (!('restrict' in settings)) settings.restrict = true
                 if (!('autorestart' in settings)) settings.autorestart = true
                 if (!('anticall' in settings)) settings.antiCall = true
-                if (!('image' in settings)) settings.image = true
+                if (!('image' in settings)) settings.image = false
                 if (!('gif' in settings)) settings.gif = false 
                 if (!('teks' in settings)) settings.teks = false
                 if (!('doc' in settings)) settings.doc = false
-                if (!('button' in settings)) settings.button = false
+                if (!('button' in settings)) settings.button = true
                 if (!('backupDB' in settings)) settings.restartDB = false
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
@@ -977,11 +977,11 @@ export async function handler(chatUpdate) {
                 autoread: true,
                 antiCall: true, 
                 restrict: true,
-                image: true,
+                image: false,
                 gif: false,
                 teks: false,
                 doc: false,
-                button: false,
+                button: true,
                 gcImg: true,
                 gcGif: false,
                 gcTeks: false,
