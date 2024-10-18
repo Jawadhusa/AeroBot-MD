@@ -57,13 +57,14 @@ global.media = {
 global.url = {
  sig: 'https://instagram.com/hg_hardy',
  sgh:  'https://github.com/GX004',
- sgc: 'https://chat.whatsapp.com/Fg17qkyJ5rWAtE5hlR5F0w'
+ sgc: 'https://chat.whatsapp.com/HOq3Er0tqddCnvf5aaPaGh'
 }
-// Donasi
+// Donate
 global.payment = {
- psaweria: 'https://saweria.co/tiooxy',
+ psaweria: '',
  ptrakterr: '-',
- pdana: '082285357346'
+ pdana: '',
+ paypal: 'https://paypal.me/tzaym1'
 }
 // Info Wait
 global.msg = {
