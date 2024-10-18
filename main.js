@@ -261,18 +261,10 @@ async function connectionUpdate(update) {
     }
     if (global.db.data == null) loadDatabase()
     if (connection === "open") {
-        const deviceName = os.hostname();
-        const message = `• *Info*: Bot is online
-◦ *Os*: ${os.platform()} ${os.release()}
-◦ *Device*: ${deviceName}
-◦ *NameBot*: ${global.namebot}
-◦ *Connected time*: ${new Date().toLocaleString()}`;
-
-        const onlinemsg = `*A E R O - B O T*
+        const message = `• *A E R O - B O T*
         Your bot activated successfully`;
-        
-        this.sendMessage(global.nomerown + `@s.whatsapp.net`, {
-            text: onlinemsg
+this.sendMessage(global.nomerown + `@s.whatsapp.net`, {
+            text: message
         });
         console.log(chalk.bgGreen(chalk.white('The bot is active')));
     }
