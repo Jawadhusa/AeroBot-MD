@@ -130,12 +130,13 @@ class RetaTube extends API {
 // Plugin handler
 const handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) throw `for example: \n*${usedPrefix + command} video link* \nSUPPORTED LINK LIST:\n- YouTube\n- Instagram\n- TikTok\n- Facebook\n- Twitter\n- And many more`;
+    await m.react(rwait)
 
     const retatube = new RetaTube();
     try {
         const result = await retatube.scrape(text);
-        let videoMessage = `*Title*: ${result.title}\n*Description*: ${result.description}\n\n*Video*:`;
-        let audioMessage = `*Audio*:`;
+        let videoMessage = `*Title*: ${result.title}`;
+        let audioMessage = ``;
 
         // Send video
         if (result.videoLinks.length > 0) {
@@ -148,6 +149,33 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         await conn.reply(m.chat, `An error occurred: ${error.message}`, m);
     }
 };
+
+/*handler.before = async (m, { conn }) => {
+  if (m.fromMe) return
+  let links = extractLinks(m.text);
+  if (!links.length) return;
+
+  for (let link of links) {
+  				
+    const retatube = new RetaTube();
+    try {
+        const result = await retatube.scrape(link);
+        let videoMessage = `*Title*: ${result.title}`;
+        let audioMessage = ``;
+
+        // Send video
+        if (result.videoLinks.length > 0) {
+            const video = result.videoLinks[0]; // Get the best quality video
+            await conn.sendMessage(m.chat, { video: { url: video.url }, caption: videoMessage }, { quoted: m });
+        } else {
+            await conn.reply(m.chat, "Sorry, video not found.", m);
+        }
+    } catch (error) {
+        await conn.reply(m.chat, `An error occurred: ${error.message}`, m);
+    }
+  
+}
+}*/
 
 handler.help = ["aio"];
 handler.tags = ["downloader"];
