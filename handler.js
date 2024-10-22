@@ -1326,9 +1326,6 @@ ${global.namebot}
 
             let stat
             if (m.plugin) {
-              let rn = ['recording','composing']
-              let jd = rn[Math.floor(Math.random() * rn.length)]
-              await this.sendPresenceUpdate(jd,m.chat)
                 let now = +new Date
                 if (m.plugin in stats) {
                     stat = stats[m.plugin]
@@ -1360,7 +1357,7 @@ ${global.namebot}
         } catch (e) {
             console.log(m, m.quoted, e)
         }
-        if (global.db.data.settings[this.user.jid].autoread) await this.readMessages([m.key])
+        if (global.db.data.settings[this.user.jid].autoread) this.readMessages([m.key])
     }
 }
 
