@@ -1,6 +1,6 @@
 {
   "name": "aero-bot-md",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Simple WhatsApp Bot Multi Device",
   "main": "index.js",
   "type": "module",
