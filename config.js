@@ -11,8 +11,8 @@ import { fileURLToPath } from 'url'
 
 // Owner
 global.owner = [
-['212660131536', 'Hardy', true],
-['212705205397'],
+['212637915359', 'Hardy', true],
+['212667903423'],
 ['212646480851']
 ]
 global.mods = []
